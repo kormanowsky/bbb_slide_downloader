@@ -81,5 +81,6 @@ if __name__ == "__main__":
     try:
         main(b)
         b.quit()
-    except KeyboardInterrupt:
+    except (NoSuchElementException, KeyboardInterrupt):
+        print("Завершение работы!")
         b.quit()
