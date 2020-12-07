@@ -1,5 +1,6 @@
 from requests import get
 from pathlib import Path
+from os.path import join
 from os import unlink
 from random import randint
 from svglib.svglib import svg2rlg
