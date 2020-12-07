@@ -8,6 +8,8 @@ cd bbb_slide_downloader
 pip3 install -r requirements.txt
 ```
 
+https://sites.google.com/a/chromium.org/chromedriver/downloads
+
 
 # Run 
 ```bash 
