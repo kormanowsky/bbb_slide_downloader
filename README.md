@@ -9,9 +9,10 @@ cd bbb_slide_downloader
 pip3 install -r requirements.txt
 ```
 
-# Если Ваша версия Google Chrome отличается от версии ChromeDriver по умолчанию.
-Программа использует ChromeDriver для имитации работы браузера Google Chrome. Если у Вас установлена версия Chrome, отличная от версии драйвера, находящегося в этом репозитории, Вам необходимо скачать и поместить в соответствующую папку (chromedriver/(linux/macos/windows)) нужную Вам версию ChromeDriver, а также выдать права на исполнение. 
+# Программа использует ChromeDriver для имитации работы браузера Google Chrome. Если Ваша версия Google Chrome отличается от версии ChromeDriver по умолчанию:
+Если у Вас установлена версия Chrome, отличная от версии драйвера, находящегося в этом репозитории, Вам необходимо скачать и поместить в соответствующую папку (chromedriver/(linux/macos/windows)) нужную Вам версию ChromeDriver, а также выдать права на исполнение. 
 Скачать ChromeDriver: https://sites.google.com/a/chromium.org/chromedriver/downloads
+__С 06.12.2020 версия по умолчанию - 87__
 
 ### Для пользователей macOS: 
 Чтобы chromedriver запустился, нужно нажать ctrl и кликнуть по файлу в Finder. 
