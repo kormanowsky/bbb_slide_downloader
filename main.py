@@ -29,15 +29,18 @@ def get_browser():
     return Chrome(options=ChromeOptions(), executable_path=chromedriver_path)
 
 
-def main(browser):
+def download(browser):
+
     url = input("Введите URL из почты:")
     output_file_name = input("Введите имя выходного файла:")
     random_int = randint(10 ** 5, 2 * 10 ** 5)
+
     try:
         browser.get(url)
     except InvalidArgumentException:
         print("Некорректный URL")
         return
+
     name_input = browser.find_element_by_id(
         "_".join([""] + url.split("/")[-2:] + ["join", "name"])
     )
@@ -87,11 +90,15 @@ def main(browser):
     print("Результат записан в файл: {}".format(output_pdf_file_name))
 
 
-if __name__ == "__main__":
-    b = get_browser()
+def main():
+    browser = get_browser()
     try:
-        main(b)
-        b.quit()
+        download(browser)
+        browser.quit()
     except (NoSuchElementException, KeyboardInterrupt):
         print("Завершение работы!")
-        b.quit()
+        browser.quit()
+
+
+if __name__ == "__main__":
+    main()
