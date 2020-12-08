@@ -7,7 +7,8 @@ from svglib.svglib import svg2rlg
 from reportlab.graphics.renderPDF import drawToFile
 from PyPDF2 import PdfFileMerger
 from selenium.webdriver import Chrome, ChromeOptions
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, \
+    InvalidArgumentException
 from sys import platform
 from time import sleep
 
@@ -32,8 +33,11 @@ def main(browser):
     url = input("Введите URL из почты:")
     output_file_name = input("Введите имя выходного файла:")
     random_int = randint(10 ** 5, 2 * 10 ** 5)
-
-    browser.get(url)
+    try:
+        browser.get(url)
+    except InvalidArgumentException:
+        print("Некорректный URL")
+        return
     name_input = browser.find_element_by_id(
         "_".join([""] + url.split("/")[-2:] + ["join", "name"])
     )
