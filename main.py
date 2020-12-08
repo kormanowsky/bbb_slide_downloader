@@ -45,8 +45,14 @@ def main(browser):
             current_slide = browser.find_element_by_tag_name("image")
             break
         except NoSuchElementException:
-            print("Встреча не активна, повторяем через 5 секунд...")
-            sleep(5)
+            try:
+                browser.find_element_by_tag_name("video")
+                print("Сейчас не демонстрируется презентация, "
+                      "повторите поптыку позже")
+                return
+            except NoSuchElementException:
+                print("Встреча не активна, повторяем через 5 секунд...")
+                sleep(5)
 
     main_path = "/".join(
         current_slide.get_attribute("xlink:href").split("/")[:-1])
