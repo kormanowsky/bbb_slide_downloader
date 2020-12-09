@@ -85,9 +85,8 @@ def download(browser):
         print("Скачан слайд: {}".format(slide))
         slide += 1
 
-    output_pdf_file_name = "{}.pdf".format(output_file_name)
-    pdf_merger.write(open(output_pdf_file_name, "wb"))
-    print("Результат записан в файл: {}".format(output_pdf_file_name))
+    pdf_merger.write(open(output_file_name, "wb"))
+    print("Результат записан в файл: {}".format(output_file_name))
 
 
 def main():
