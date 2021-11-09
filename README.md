@@ -13,7 +13,7 @@ pip3 install -r requirements.txt
 Если у Вас установлена версия Chrome, отличная от версии драйвера, находящегося в этом репозитории, Вам необходимо скачать и поместить в соответствующую папку (chromedriver/(linux/macos/windows)) нужную Вам версию ChromeDriver, а также выдать права на исполнение. 
 Скачать ChromeDriver: https://sites.google.com/a/chromium.org/chromedriver/downloads (старая ссылка) https://sites.google.com/chromium.org/driver/downloads (новая)
 
-__С 06.12.2020 версия по умолчанию - 87__
+__С 09.11.2021 версия по умолчанию - 87, для macOS - 95__
 
 ### Для пользователей macOS: 
 Чтобы chromedriver запустился, нужно нажать ctrl и кликнуть по файлу в Finder. 
